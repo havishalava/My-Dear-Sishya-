@@ -1,28 +1,50 @@
 # My-Dear-Sishya-
+
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Be My Valentine?</title>
+    <title>For My Favorite Person</title>
     <style>
-        body { text-align: center; font-family: 'Palatino', serif; background-color: #fff0f3; color: #d00000; padding: 50px; }
-        h1 { font-size: 50px; }
-        .heart { font-size: 100px; color: #e63946; }
-        button { background-color: #ff4d6d; color: white; border: none; padding: 15px 32px; font-size: 16px; border-radius: 20px; cursor: pointer; margin: 10px; }
-        button:hover { background-color: #c9184a; }
+        body { 
+            text-align: center; 
+            font-family: 'Arial', sans-serif; 
+            background-color: #ffe5ec; 
+            color: #ff4d6d; 
+            padding: 100px; 
+        }
+        h1 { font-size: 60px; margin-bottom: 10px; }
+        p { font-size: 20px; }
+        .heart { font-size: 80px; }
+        .buttons { margin-top: 30px; position: relative; height: 100px; }
+        button { 
+            padding: 15px 30px; 
+            font-size: 18px; 
+            border-radius: 50px; 
+            border: none; 
+            cursor: pointer; 
+            transition: 0.3s;
+        }
+        #yesBtn { background-color: #ff4d6d; color: white; }
+        #noBtn { background-color: #fb6f92; color: white; position: absolute; }
     </style>
 </head>
 <body>
-    <div class="heart">❤️</div>
-    <h1>Will you be my Valentine?</h1>
-    <p>I promise i will not messup .</p>
-    <button onclick="alert('Yay! See you on the 14th! ❤️')">YES!</button>
-    <button onclick="moveButton(this)">NO</button>
+    <div class="heart">💖</div>
+    <h1>[Dear sishya], will you be my Valentine?</h1>
+    <p> Can i plan a trip? !</p>
+
+    <div class="buttons">
+        <button id="yesBtn" onclick="alert('Yay! I can\'t wait! ❤️')">YES!</button>
+        <button id="noBtn" onmouseover="moveButton()">NO</button>
+    </div>
 
     <script>
-        function moveButton(btn) {
-            btn.style.position = 'absolute';
-            btn.style.top = Math.random() * window.innerHeight + 'px';
-            btn.style.left = Math.random() * window.innerWidth + 'px';
+        function moveButton() {
+            const btn = document.getElementById('noBtn');
+            const x = Math.random() * (window.innerWidth - btn.offsetWidth);
+            const y = Math.random() * (window.innerHeight - btn.offsetHeight);
+            btn.style.left = x + 'px';
+            btn.style.top = y + 'px';
         }
     </script>
 </body>

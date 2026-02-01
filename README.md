@@ -1,1 +1,29 @@
 # My-Dear-Sishya-
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Be My Valentine?</title>
+    <style>
+        body { text-align: center; font-family: 'Palatino', serif; background-color: #fff0f3; color: #d00000; padding: 50px; }
+        h1 { font-size: 50px; }
+        .heart { font-size: 100px; color: #e63946; }
+        button { background-color: #ff4d6d; color: white; border: none; padding: 15px 32px; font-size: 16px; border-radius: 20px; cursor: pointer; margin: 10px; }
+        button:hover { background-color: #c9184a; }
+    </style>
+</head>
+<body>
+    <div class="heart">❤️</div>
+    <h1>Will you be my Valentine?</h1>
+    <p>I promise there will be snacks.</p>
+    <button onclick="alert('Yay! See you on the 14th! ❤️')">YES!</button>
+    <button onclick="moveButton(this)">NO</button>
+
+    <script>
+        function moveButton(btn) {
+            btn.style.position = 'absolute';
+            btn.style.top = Math.random() * window.innerHeight + 'px';
+            btn.style.left = Math.random() * window.innerWidth + 'px';
+        }
+    </script>
+</body>
+</html>
